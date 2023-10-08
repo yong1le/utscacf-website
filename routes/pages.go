@@ -7,10 +7,6 @@ import (
 	"github.com/go-chi/chi/v5"
 )
 
-type Content struct {
-  Page string
-}
-
 func PagesRouter(r chi.Router) {
   tmpl, err := template.ParseGlob("templates/*.html")
   if err != nil {
@@ -19,33 +15,21 @@ func PagesRouter(r chi.Router) {
 
   // About us page: Vision statement
   r.Get("/", func (w http.ResponseWriter, r *http.Request) {
-    tmpl.ExecuteTemplate(w, "layout.html", Content{"index"})
+    tmpl.ExecuteTemplate(w, "index.html", nil)
   })
 
   // Ministries page: Weekly meetings, small groups, retreats
   r.Get("/ministries", func (w http.ResponseWriter, r *http.Request) {
-    tmpl.ExecuteTemplate(w, "layout.html", Content{"ministries"})
+    tmpl.ExecuteTemplate(w, "ministries.html", nil)
   })
 
   // Committies page: Information about the current committee
   r.Get("/committee", func (w http.ResponseWriter, r *http.Request) {
-    tmpl.ExecuteTemplate(w, "layout.html", Content{"committee"})
+    tmpl.ExecuteTemplate(w, "committee.html", nil)
   })
 
   // Contacts/Join Us page: Social media handles, local churches
   r.Get("/contact", func (w http.ResponseWriter, r *http.Request) {
-    tmpl.ExecuteTemplate(w, "layout.html", Content{"contact"})
+    tmpl.ExecuteTemplate(w, "contact.html", nil)
   })
-}
-
-func visitHomePage(w http.ResponseWriter, r *http.Response) {
-  
-}
-
-func visitAboutPage(w http.ResponseWriter, r *http.Response) {
-  
-}
-
-func visitContactPage(w http.ResponseWriter, r *http.Response) {
-  
 }

@@ -21,11 +21,23 @@
     @apply px-10 sm:px-16 md:px-28 lg:px-48;
   }
 
+  .responsive-my {
+    @apply py-12 md:py-20 lg:py-24
+  }
+
+  .responsive-title {
+    @apply text-3xl md:text-5xl lg:text-6xl pb-5 md:pb-8 lg:pb-10 
+  }
+
+  .responsive-text {
+    @apply md:text-xl
+  }
+
   .nav-link{
-    @apply text-xl hover:text-slate-400
+    @apply hover:text-slate-400
   }
 
   .active-link{
-    @apply text-xl text-slate-400
+    @apply text-slate-400
   }
 }
