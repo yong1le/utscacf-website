@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Poppins";
+    src: url("/static/assets/Poppins-Light.ttf");
+    font-weight: normal;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("/static/assets/Poppins-Bold.ttf");
+    font-weight: bold;
+  }
+
+  .page-width {
+    @apply px-10 sm:px-16 md:px-28 lg:px-48;
+  }
+
+  .nav-link{
+    @apply text-xl hover:text-slate-400
+  }
+
+  .active-link{
+    @apply text-xl text-slate-400
+  }
+}

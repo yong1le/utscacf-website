@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="/static/css/output.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="/static/assets/acf-logo.ico" />
+    <script src="/static/js/htmx.min.js"></script>
+  </head>
+  <body>
+    <header
+      class="bg-beige flex flex-row justify-between pt-14 pb-4 page-width"
+    >
+      <!-- Left Side: Title -->
+      <div
+        class="flex flex-row items-end cursor-pointer"
+        hx-get="/"
+        hx-target="body"
+        hx-push-url="true"
+      >
+        <img class="h-[4em]" src="/static/assets/acf-logo.svg" alt="ACF Logo" />
+        <p class="font-bold text-4xl mx-3">ACF</p>
+      </div>
+
+      <!-- Right Side: Navigation -->
+      <nav hx-boost="true" class="flex flex-row items-end gap-6">
+        <!-- Checks which page we are on and highlights the link -->
+        <a
+          href="/ministries"
+          class=
+          {{ if eq .Page "ministries"}}
+            "active-link"
+          {{else}}
+            "nav-link"
+          {{end}}
+        >
+          Ministries
+        </a>
+        <a
+          href="/committee"
+          class=
+          {{ if eq .Page "committee"}}
+            "active-link"
+          {{else}}
+            "nav-link"
+          {{end}}
+        >
+          Committee
+        </a>
+        <a
+          href="/contact"
+          class=
+          {{ if eq .Page "contact"}}
+            "active-link"
+          {{else}}
+            "nav-link"
+          {{end}}
+        >
+          Join Us
+        </a>
+      </nav>
+    </header>
+
+    {{ if eq .Page "index" }}
+      {{ template "index.html" }}
+    {{ else if eq .Page "ministries"}}
+      {{ template "ministries.html"}}
+    {{ else if eq .Page "committee"}}
+      {{ template "committee.html"}}
+    {{ else if eq .Page "contact"}}
+      {{ template "contact.html"}}
+    {{end}}
+
+    <footer
+      class="bg-black text-white page-width flex flex-col justify-center items-center py-10"
+    >
+      <h3 class="text-4xl">Contact Us</h3>
+      <nav class="mb-10 mt-2 flex gap-4">
+        <a class="nav-link" href="https://www.instagram.com/acf.utsc/">Instagram</a>
+        <a class="nav-link" href="acf.utsc@gmail.com">Email</a>
+      </nav>
+      <p>
+        Made with Go, HTMX, Tailwind CSS, and ❤️
+      </p>
+    </footer>
+  </body>
+</html>
