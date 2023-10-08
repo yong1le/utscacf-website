@@ -7,12 +7,14 @@
     font-family: "Poppins";
     src: url("/static/assets/Poppins-Light.ttf");
     font-weight: normal;
+    font-display: swap;
   }
 
   @font-face {
     font-family: "Poppins";
     src: url("/static/assets/Poppins-Bold.ttf");
     font-weight: bold;
+    font-display: swap;
   }
 
   .page-width {

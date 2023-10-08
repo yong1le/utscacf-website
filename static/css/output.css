@@ -440,6 +440,8 @@ video {
   src: url("/static/assets/Poppins-Light.ttf");
 
   font-weight: normal;
+
+  font-display: swap;
 }
 
 @font-face {
@@ -448,6 +450,8 @@ video {
   src: url("/static/assets/Poppins-Bold.ttf");
 
   font-weight: bold;
+
+  font-display: swap;
 }
 
 .page-width {
@@ -602,14 +606,6 @@ video {
   margin-bottom: 2.5rem;
 }
 
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
-.mb-6 {
-  margin-bottom: 1.5rem;
-}
-
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -662,16 +658,12 @@ video {
   justify-content: space-between;
 }
 
-.gap-6 {
-  gap: 1.5rem;
-}
-
-.gap-2 {
-  gap: 0.5rem;
-}
-
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
 }
 
 .self-end {
@@ -710,10 +702,6 @@ video {
   padding-top: 3.5rem;
 }
 
-.pb-10 {
-  padding-bottom: 2.5rem;
-}
-
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -729,11 +717,6 @@ video {
   line-height: 1.75rem;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .font-bold {
   font-weight: 700;
 }
@@ -744,11 +727,6 @@ video {
 
 .leading-tight {
   line-height: 1.25;
-}
-
-.text-slate-400 {
-  --tw-text-opacity: 1;
-  color: rgb(148 163 184 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -770,9 +748,4 @@ video {
 
 .\[a-zA-Z\:\\-\\\.\] {
   a-z-a--z: \-\.;
-}
-
-.hover\:text-slate-400:hover {
-  --tw-text-opacity: 1;
-  color: rgb(148 163 184 / var(--tw-text-opacity));
 }
