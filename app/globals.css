@@ -5,14 +5,14 @@
 @layer base {
   @font-face {
     font-family: "Poppins";
-    src: url("/static/assets/Poppins-Light.ttf");
+    src: url("/Poppins-Light.ttf");
     font-weight: normal;
     font-display: swap;
   }
 
   @font-face {
     font-family: "Poppins";
-    src: url("/static/assets/Poppins-Bold.ttf");
+    src: url("/Poppins-Bold.ttf");
     font-weight: bold;
     font-display: swap;
   }
@@ -21,23 +21,23 @@
     @apply px-10 sm:px-16 md:px-28 lg:px-48;
   }
 
-  .responsive-my {
-    @apply py-12 md:py-20 lg:py-24
+  .section {
+    @apply flex flex-col justify-center py-12 py-20 lg:min-h-screen;
   }
 
   .responsive-title {
-    @apply text-3xl md:text-5xl lg:text-6xl pb-5 md:pb-8 lg:pb-10 
+    @apply text-3xl md:text-5xl lg:text-6xl pb-5 md:pb-8 lg:pb-10;
   }
 
   .responsive-text {
-    @apply md:text-xl
+    @apply md:text-xl;
   }
 
-  .nav-link{
-    @apply hover:text-slate-400
+  .nav-link {
+    @apply hover:text-slate-400;
   }
 
-  .active-link{
-    @apply text-slate-400
+  .active-link {
+    @apply text-slate-400;
   }
 }
