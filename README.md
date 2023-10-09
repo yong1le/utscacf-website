@@ -1,2 +1,2 @@
 # UTSC ACF Website
-WIP
+WIP - Visit the website [here](https://utscacf.vercel.app)
