@@ -3,20 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  @font-face {
-    font-family: "Poppins";
-    src: url("/Poppins-Light.ttf");
-    font-weight: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: "Poppins";
-    src: url("/Poppins-Bold.ttf");
-    font-weight: bold;
-    font-display: swap;
-  }
-
   .page-width {
     @apply px-10 sm:px-16 md:px-28 lg:px-48;
   }
