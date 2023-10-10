@@ -17,7 +17,7 @@ const Profile = ({
 }) => {
   return (
     <div className="flex flex-col pt-6">
-      <div className="h-[400px] md:h-[230px] lg:h-[250px] relative">
+      <div className="relative h-[400px] md:h-[230px] lg:h-[250px]">
         <Image
           src={image}
           alt={`Picture of ${name}`}
@@ -34,7 +34,7 @@ const Profile = ({
           </p>
         ))}
       </div>
-      <div className="pt-3 flex flex-row gap-4">
+      <div className="flex flex-row gap-4 pt-3">
         {handles.Facebook && <Facebook href={`${handles.Facebook}`} />}
         {handles.Instagram && <Instagram href={`${handles.Instagram}`} />}
         {handles.Email && <Email href={`${handles.Email}`} />}

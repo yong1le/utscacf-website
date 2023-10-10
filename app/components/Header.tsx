@@ -32,9 +32,9 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-beige flex flex-row flex-wrap justify-between pt-14 pb-4 page-width">
+    <header className="page-width flex flex-row flex-wrap justify-between bg-beige pb-4 pt-14">
       <div>
-        <Link href="/" className="flex flex-row items-end cursor-pointer">
+        <Link href="/" className="flex cursor-pointer flex-row items-end">
           <Image
             className="pb-1"
             src="/acf-logo.svg"
@@ -42,24 +42,24 @@ const Header = () => {
             width="80"
             height="80"
           />
-          <p className=" font-bold text-4xl mx-3">ACF</p>
+          <p className=" mx-3 text-4xl font-bold">ACF</p>
         </Link>
       </div>
 
       <button
-        className="block self-end md:hidden nav-link pb-1"
+        className="nav-link block self-end pb-1 md:hidden"
         onClick={toggleNavBar}
       >
         <FaBars size={40} />
       </button>
       <nav
-        className="pt-10 hidden basis-full md:pt-0 md:basis-auto md:flex md:flex-row md:items-end"
+        className="hidden basis-full pt-10 md:flex md:basis-auto md:flex-row md:items-end md:pt-0"
         ref={navBar}
       >
         <ul className="flex flex-col gap-6 md:flex-row">
           {informationPages.map((elm, i) => (
             <li key={i}>
-              <Link href={elm.url} className="block nav-link responsive-text">
+              <Link href={elm.url} className="nav-link responsive-text block">
                 {elm.title}
               </Link>
             </li>

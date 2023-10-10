@@ -30,7 +30,7 @@ const Committee = () => {
       handles: {
         Facebook: "https://www.facebook.com/acfutsc/",
         Instagram: "https://www.instagram.com/acf.utsc/",
-        Email: "acf.utsc@gmail.com"
+        Email: "acf.utsc@gmail.com",
       },
     },
     {
@@ -40,16 +40,16 @@ const Committee = () => {
       handles: {
         Facebook: "",
         Instagram: "",
-        Email: ""
+        Email: "",
       },
     },
   ];
 
   return (
     <div>
-      <div className="bg-beige page-width section">
+      <div className="page-width section bg-beige">
         <h1 className="responsive-title">Committee Team</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {members.map((elm, i) => (
             <Profile
               key={i}
