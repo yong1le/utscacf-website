@@ -19,7 +19,7 @@ const Profile = ({
     <div className="flex flex-col pt-6">
       <div className="relative h-[400px] md:h-[230px] lg:h-[250px]">
         <Image
-          src={image}
+          src={`/assets/${image}`}
           alt={`Picture of ${name}`}
           layout="full"
           fill={true}

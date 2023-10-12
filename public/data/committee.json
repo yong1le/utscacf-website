@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Joanne Lee",
+    "image": "Joanne.jpg",
+    "roles": ["Chair"],
+    "handles": {
+      "Facebook": "",
+      "Instagram": "",
+      "Email": ""
+    }
+  },
+  {
+    "name": "Matthew Leung",
+    "image": "Matthew.jpg",
+    "roles": ["Vice Chair", "Small Group Coordinator"],
+    "handles": {
+      "Facebook": "",
+      "Instagram": "",
+      "Email": ""
+    }
+  },
+  {
+    "name": "Joshua Siu",
+    "image": "Joshua.webp",
+    "roles": ["Secretary", "Treasurer"],
+    "handles": {
+      "Facebook": "",
+      "Instagram": "",
+      "Email": ""
+    }
+  },
+  {
+    "name": "Morgan Huang",
+    "image": "Morgan.jpg",
+    "roles": ["Worship Coordinator"],
+    "handles": {
+      "Facebook": "",
+      "Instagram": "",
+      "Email": ""
+    }
+  }
+]
