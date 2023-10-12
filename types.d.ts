@@ -10,3 +10,9 @@ type CommMember = {
   roles: Array<string>;
   handles: Handle;
 };
+
+type MeetingEvent = {
+  name: string,
+  image: string,
+  description: Array<string>
+}

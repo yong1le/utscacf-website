@@ -36,7 +36,7 @@ const Header = () => {
       <div>
         <Link href="/" className="flex cursor-pointer flex-row items-end">
           <Image
-            className="pb-1"
+            className="h-auto max-w-full pb-1"
             src="/acf-logo.svg"
             alt="ACF Logo"
             width="80"
