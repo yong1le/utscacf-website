@@ -1,5 +1,6 @@
 export default function Home() {
   return (
+    // Vision Statement
     <div>
       <div className="page-width section bg-beige">
         <h1 className="responsive-title leading-tight">
@@ -11,23 +12,14 @@ export default function Home() {
         </p>
       </div>
 
+      {/* Some more information */}
       <div className="page-width section bg-black text-white ">
-        <h1 className="responsive-title">Placeholder Title</h1>
+        <h1 className="responsive-title">UTSC Asian Christian Fellowship</h1>
         <p className="responsive-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-          totam aliquid libero deleniti a ad, inventore corrupti alias nostrum
-          doloribus ea ducimus error recusandae? Natus quae a corrupti, quaerat
-          asperiores aspernatur cum eveniet atque placeat laborum dolores
-          deleniti assumenda beatae possimus vitae ducimus officia hic facilis
-          nesciunt, harum amet dignissimos.
-        </p>
-        <p className="responsive-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-          totam aliquid libero deleniti a ad, inventore corrupti alias nostrum
-          doloribus ea ducimus error recusandae? Natus quae a corrupti, quaerat
-          asperiores aspernatur cum eveniet atque placeat laborum dolores
-          deleniti assumenda beatae possimus vitae ducimus officia hic facilis
-          nesciunt, harum amet dignissimos.
+          We are a student-led Christian campus fellowship at the University of
+          Toronto Scarborough. We aim to build fruitful, Christ-centred
+          relationships and grow in faith with a desire to serve. Please add
+          more...
         </p>
       </div>
     </div>

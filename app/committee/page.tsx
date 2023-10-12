@@ -1,10 +1,8 @@
 import React from "react";
 import Profile from "../components/Profile";
-import committee from "@/public/data/committee.json"
-import { validateJSON } from "../utils/validate";
+import committee from "@/public/data/committee.json";
 
 const Committee = async () => {
-  validateJSON<CommMember>(committee)
   return (
     <div>
       <div className="page-width section bg-beige">

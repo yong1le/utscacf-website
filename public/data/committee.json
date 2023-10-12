@@ -5,7 +5,7 @@
     "roles": ["Chair"],
     "handles": {
       "Facebook": "",
-      "Instagram": "",
+      "Instagram": "https://www.instagram.com/jodaeunlee",
       "Email": ""
     }
   },
@@ -14,8 +14,8 @@
     "image": "Matthew.jpg",
     "roles": ["Vice Chair", "Small Group Coordinator"],
     "handles": {
-      "Facebook": "",
-      "Instagram": "",
+      "Facebook": "https://www.facebook.com/profile.php?id=100009121949995",
+      "Instagram": "https://www.instagram.com/mattt.leung",
       "Email": ""
     }
   },
@@ -24,7 +24,7 @@
     "image": "Joshua.webp",
     "roles": ["Secretary", "Treasurer"],
     "handles": {
-      "Facebook": "",
+      "Facebook": "https://www.facebook.com/profile.php?id=100024571576195",
       "Instagram": "",
       "Email": ""
     }
@@ -35,7 +35,7 @@
     "roles": ["Worship Coordinator"],
     "handles": {
       "Facebook": "",
-      "Instagram": "",
+      "Instagram": "https://www.instagram.com/morgan.h201",
       "Email": ""
     }
   }
