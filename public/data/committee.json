@@ -1,7 +1,7 @@
 [
   {
     "name": "Joanne Lee",
-    "image": "Joanne.jpg",
+    "image": "Joanne.png",
     "roles": ["Chair"],
     "handles": {
       "Facebook": "",
@@ -11,7 +11,7 @@
   },
   {
     "name": "Matthew Leung",
-    "image": "Matthew.jpg",
+    "image": "Matthew.png",
     "roles": ["Vice Chair", "Small Group Coordinator"],
     "handles": {
       "Facebook": "https://www.facebook.com/profile.php?id=100009121949995",
@@ -21,7 +21,7 @@
   },
   {
     "name": "Joshua Siu",
-    "image": "Joshua.webp",
+    "image": "Joshua.png",
     "roles": ["Secretary", "Treasurer"],
     "handles": {
       "Facebook": "https://www.facebook.com/profile.php?id=100024571576195",
@@ -31,7 +31,7 @@
   },
   {
     "name": "Morgan Huang",
-    "image": "Morgan.jpg",
+    "image": "Morgan.png",
     "roles": ["Worship Coordinator"],
     "handles": {
       "Facebook": "",

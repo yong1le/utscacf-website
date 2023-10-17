@@ -4,15 +4,15 @@
 
 @layer base {
   .page-width {
-    @apply px-10 sm:px-16 md:px-28 lg:px-48;
+    @apply px-10 transition-all sm:px-16 md:px-28 lg:px-48;
   }
 
   .section {
-    @apply flex flex-col justify-center py-12 md:py-12 lg:min-h-screen;
+    @apply flex flex-col justify-center py-12 transition-all md:py-12 lg:min-h-screen;
   }
 
   .responsive-title {
-    @apply text-3xl md:text-5xl lg:text-6xl pb-5 md:pb-8 lg:pb-10;
+    @apply pb-5 text-3xl md:pb-8 md:text-5xl lg:pb-10 lg:text-6xl;
   }
 
   .responsive-text {
@@ -20,10 +20,6 @@
   }
 
   .nav-link {
-    @apply hover:text-slate-400;
-  }
-
-  .active-link {
-    @apply text-slate-400;
+    @apply rounded-lg p-2 transition-all hover:bg-orange-200;
   }
 }

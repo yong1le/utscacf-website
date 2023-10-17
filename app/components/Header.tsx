@@ -1,19 +1,14 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaBars } from "react-icons/fa";
 
 const Header = () => {
-  const navBar = useRef<HTMLInputElement | null>(null);
+  const [navBar, setNavBar] = useState(false);
 
   const toggleNavBar = () => {
-    if (navBar.current == null) return;
-    if (navBar.current.classList.contains("hidden")) {
-      navBar.current.classList.remove("hidden");
-    } else {
-      navBar.current.classList.add("hidden");
-    }
+    setNavBar(!navBar);
   };
 
   const informationPages = [
@@ -53,8 +48,9 @@ const Header = () => {
         <FaBars size={40} />
       </button>
       <nav
-        className="hidden basis-full pt-10 md:flex md:basis-auto md:flex-row md:items-end md:pt-0"
-        ref={navBar}
+        className={`${
+          navBar ? "max-h-screen" : "invisible max-h-0 opacity-0"
+        } basis-full pt-10 transition-all md:visible md:static md:flex md:max-h-screen md:basis-auto md:translate-y-0 md:flex-row md:items-end md:pt-0 md:opacity-100`}
       >
         <ul className="flex flex-col gap-6 md:flex-row">
           {informationPages.map((elm, i) => (

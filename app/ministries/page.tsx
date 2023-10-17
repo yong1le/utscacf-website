@@ -1,6 +1,7 @@
 import React from "react";
 import ImageWrapper from "../components/ImageWrapper";
 import Event from "../components/Event";
+import FadeIn from "../components/handles/FadeIn";
 
 // Weekly meetings, small groups
 const events = [
@@ -27,14 +28,15 @@ const Ministries = () => {
     <div>
       <div className="page-width section bg-beige">
         <h1 className="responsive-title"> Ministries</h1>
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-8 xl:grid-cols-2">
           {events.map((elm, i) => (
-            <Event
-              key={i}
-              name={elm.name}
-              image={elm.image}
-              description={elm.description}
-            />
+            <FadeIn key={i} direction="bot">
+              <Event
+                name={elm.name}
+                image={elm.image}
+                description={elm.description}
+              />
+            </FadeIn>
           ))}
         </div>
       </div>

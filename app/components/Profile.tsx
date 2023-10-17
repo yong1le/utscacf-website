@@ -8,7 +8,7 @@ const Profile = ({ name, roles, handles, image }: CommMember) => {
   return (
     <div className="flex flex-col pt-6">
       {/* Image */}
-      <div className="relative h-[300px] md:h-[230px] lg:h-[250px]">
+      <div className="relative h-[380px] sm:h-[500px] md:h-[350px] lg:h-[250px] xl:h-[300px] 2xl:h-[380px]">
         <ImageWrapper image={image} alt={`image of ${name}`} />
       </div>
       {/* Name */}
