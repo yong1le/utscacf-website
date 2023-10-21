@@ -14,5 +14,5 @@ type CommMember = {
 type MeetingEvent = {
   name: string,
   image: string,
-  description: Array<string>
+  description: string
 }

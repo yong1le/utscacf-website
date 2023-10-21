@@ -2,14 +2,14 @@ import React from "react";
 import Facebook from "../components/handles/Facebook";
 import Instagram from "./handles/Instagram";
 import Email from "./handles/Email";
-import ImageWrapper from "./ImageWrapper";
+import Img from "./Img";
 
 const Profile = ({ name, roles, handles, image }: CommMember) => {
   return (
     <div className="flex flex-col pt-6">
       {/* Image */}
       <div className="relative h-[380px] sm:h-[500px] md:h-[350px] lg:h-[250px] xl:h-[300px] 2xl:h-[380px]">
-        <ImageWrapper image={image} alt={`image of ${name}`} />
+        <Img src={image} alt={`image of ${name}`} />
       </div>
       {/* Name */}
       <p className="pt-6 text-xl">{name}</p>

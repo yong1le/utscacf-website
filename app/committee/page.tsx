@@ -1,7 +1,7 @@
 import React from "react";
 import Profile from "../components/Profile";
 import committee from "@/public/data/committee.json";
-import FadeIn from "../components/handles/FadeIn";
+import FadeIn from "../components/FadeIn";
 
 const Committee = async () => {
   return (

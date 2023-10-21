@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
 
-const ImageWrapper = ({ image, alt }: { image: string, alt: string }) => {
+const Img = ({ src, alt }: { src: string, alt: string }) => {
   return (
     <Image
-      src={`/assets/${image}`}
+      src={`/assets/${src}`}
       alt={alt}
       fill={true}
       className="rounded-2xl object-cover"
@@ -12,4 +12,4 @@ const ImageWrapper = ({ image, alt }: { image: string, alt: string }) => {
   );
 };
 
-export default ImageWrapper;
+export default Img;

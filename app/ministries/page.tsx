@@ -1,27 +1,7 @@
 import React from "react";
-import ImageWrapper from "../components/ImageWrapper";
 import Event from "../components/Event";
-import FadeIn from "../components/handles/FadeIn";
-
-// Weekly meetings, small groups
-const events = [
-  {
-    name: "Weekly Meetings",
-    image: "weekly-felly.jpg",
-    description: [
-      `The main fellowship meeting for ACF. We meet every Wednesday from
-            5:00pm-7:00pm. Please add more...`,
-    ],
-  },
-  {
-    name: "Small Groups",
-    image: "small-group.avif",
-    description: [
-      `Smaller groups of 4-6 people that meet weekly outside of normal
-      fellowship times. Please add more...`,
-    ],
-  },
-];
+import events from "@/public/data/ministries.json"
+import FadeIn from "../components/FadeIn";
 
 const Ministries = () => {
   return (

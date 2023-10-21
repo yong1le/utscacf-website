@@ -1,4 +1,4 @@
-import FadeIn from "./components/handles/FadeIn";
+import FadeIn from "./components/FadeIn";
 
 export default function Home() {
   return (
