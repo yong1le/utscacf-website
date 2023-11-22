@@ -1,7 +1,8 @@
 import React from "react";
-import Instagram from "./handles/Instagram";
-import Facebook from "./handles/Facebook";
-import Email from "./handles/Email";
+import Instagram from "./socials/Instagram";
+import Facebook from "./socials/Facebook";
+import Email from "./socials/Email";
+import Discord from "./socials/Discord";
 
 const Footer = () => {
   return (
@@ -10,6 +11,7 @@ const Footer = () => {
       <nav className="mb-10 mt-2 flex gap-4">
         <Instagram href="https://www.instagram.com/acf.utsc/" />
         <Facebook href="https://www.facebook.com/acfutsc" />
+        <Discord href="https://discord.gg/ECaymHuDRn" />
         <Email href="acf.utsc@gmail.com" />
       </nav>
       <p>Made with React, Next, Tailwind CSS, and ❤️</p>

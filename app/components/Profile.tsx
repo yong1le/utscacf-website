@@ -1,7 +1,7 @@
 import React from "react";
-import Facebook from "../components/handles/Facebook";
-import Instagram from "./handles/Instagram";
-import Email from "./handles/Email";
+import Facebook from "./socials/Facebook";
+import Instagram from "./socials/Instagram";
+import Email from "./socials/Email";
 import Img from "./Img";
 
 const Profile = ({ name, roles, handles, image }: CommMember) => {
