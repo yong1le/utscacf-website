@@ -1,12 +1,13 @@
 import React from "react";
+import Section from "../../components/data/Section";
 
 // Finding a Local Church
 const Contact = () => {
   return (
     <div>
-      <div className="page-width section bg-beige">
+      <Section className="bg-beige">
         <h1 className="responsive-title">Join Us!</h1>
-      </div>
+      </Section>
     </div>
   );
 };

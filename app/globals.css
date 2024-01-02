@@ -3,14 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  .page-width {
-    @apply px-10 transition-all sm:px-16 md:px-28 lg:px-48;
-  }
-
-  .section {
-    @apply flex flex-col justify-center py-12 transition-all lg:min-h-screen;
-  }
-
   .responsive-title {
     @apply pb-5 text-3xl md:pb-8 md:text-5xl lg:pb-10 lg:text-6xl;
   }
