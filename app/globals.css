@@ -8,7 +8,7 @@
   }
 
   .section {
-    @apply flex flex-col justify-center py-12 transition-all md:py-12 lg:min-h-screen;
+    @apply flex flex-col justify-center py-12 transition-all lg:min-h-screen;
   }
 
   .responsive-title {
