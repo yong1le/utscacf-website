@@ -1,18 +1,14 @@
-type SocialHandle = {
-  Facebook: string;
-  Instagram: string;
-  Email: string;
-};
+import { Entry } from "@keystatic/core/reader";
+import keystaticConfig from "./keystatic.config";
 
-type CommMember = {
-  name: string;
-  image: string;
-  roles: Array<string>;
-  handles: Handle;
-};
+type CommitteeType = Entry<
+  (typeof keystaticConfig)["collections"]["committee"]
+>;
 
-type MeetingEvent = {
-  name: string,
-  image: string,
-  description: string
-}
+type MinistryType = Entry<(typeof keystaticConfig)["collections"]["ministry"]>;
+
+type EventType = Entry<(typeof keystaticConfig)["collections"]["event"]>;
+
+type ChurchType = Entry<(typeof keystaticConfig)["collections"]["church"]>;
+
+type VisionType = Entry<(typeof keystaticConfig)["singletons"]["vision"]>;

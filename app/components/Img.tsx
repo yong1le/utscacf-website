@@ -4,7 +4,7 @@ import Image from "next/image";
 const Img = ({ src, alt }: { src: string, alt: string }) => {
   return (
     <Image
-      src={`/assets/${src}`}
+      src={`${src}`}
       alt={alt}
       fill={true}
       className="rounded-2xl object-cover"
