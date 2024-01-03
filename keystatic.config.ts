@@ -1,14 +1,14 @@
 import { collection, config, fields, singleton } from "@keystatic/core";
 
 export default config({
-  // storage: { kind: "local" },
-  storage: {
-    kind: "github",
-    repo: {
-      owner: "yong1le",
-      name: "utscacf-website",
-    },
-  },
+  storage: { kind: "local" },
+  // storage: {
+  //   kind: "github",
+  //   repo: {
+  //     owner: "yong1le",
+  //     name: "utscacf-website",
+  //   },
+  // },
   ui: {
     brand: { name: "UTSC ACF" },
     navigation: ["vision", "committee", "ministry", "event", "church"],
@@ -82,17 +82,16 @@ export default config({
           directory: "public/images/event",
           publicPath: "/images/event",
         }),
-        roles: fields.url({
+        link: fields.url({
           label: "Link",
           description:
             "Relevant link regarding the event (Information, RBSP, etc...)",
           validation: { isRequired: true },
         }),
-        description: fields.document({
+        description: fields.text({
           label: "Description (optional)",
           description:
             "Description of the event (Who, What, Where, When, etc...)",
-          formatting: true,
         }),
       },
     }),

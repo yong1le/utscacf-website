@@ -13,16 +13,17 @@ const CommitteePage = async () => {
     <div>
       <Section className="bg-beige">
         <h1 className="responsive-title">Committee Team</h1>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {committee && committee.map((elm, i) => (
-            <Committee
-              key={i}
-              name={elm.entry.name}
-              roles={elm.entry.roles}
-              handles={elm.entry.handles}
-              image={elm.entry.image}
-            />
-          ))}
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {committee &&
+            committee.map((elm, i) => (
+              <Committee
+                key={i}
+                name={elm.entry.name}
+                roles={elm.entry.roles}
+                handles={elm.entry.handles}
+                image={elm.entry.image}
+              />
+            ))}
         </div>
       </Section>
     </div>

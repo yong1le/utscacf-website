@@ -1,16 +1,39 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaBars } from "react-icons/fa";
 import Section from "./data/Section";
 
 const Header = () => {
-  const [navBar, setNavBar] = useState(false);
+  const [navBarVisible, setNavBarVisible] = useState(false);
+  const [headerVisible, setHeaderVisible] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
 
   const toggleNavBar = () => {
-    setNavBar(!navBar);
+    setNavBarVisible(!navBarVisible);
   };
+
+  useEffect(() => {
+    function handleHideHeader() {
+      const currentScrollPos = window.scrollY;
+      if (currentScrollPos === 0) {
+        setHeaderVisible(true);
+        return;
+      }
+
+      const isScrollingDown = currentScrollPos > prevScrollPos;
+      const scrollDelta = Math.abs(currentScrollPos - prevScrollPos);
+
+      if (scrollDelta > 10) {
+        setHeaderVisible(!isScrollingDown);
+      }
+      setPrevScrollPos(currentScrollPos);
+    }
+    window.addEventListener("scroll", handleHideHeader);
+
+    return () => window.removeEventListener("scroll", handleHideHeader);
+  }, [prevScrollPos]);
 
   const informationPages = [
     {
@@ -29,8 +52,10 @@ const Header = () => {
 
   return (
     <Section
-      className="sticky top-0 z-50 !flex-row flex-wrap 
-      !justify-between bg-beige !pb-5 !pt-10 sm:!min-h-0"
+      className={`sticky top-0 z-50 w-full !flex-row flex-wrap items-end
+      !justify-between bg-beige !pb-5 !pt-10 transition-all duration-700 sm:!min-h-0
+      ${!headerVisible && "translate-y-[-200px]"}
+      `}
     >
       <div>
         <Link href="/" className="flex cursor-pointer flex-row items-end">
@@ -54,10 +79,10 @@ const Header = () => {
       <div className="relative basis-full md:basis-auto">
         <nav
           className={`${
-            navBar
+            navBarVisible
               ? "absolute right-0 z-50 mt-10 max-h-screen rounded-xl bg-orange-100 px-5 py-2"
               : "hidden max-h-0"
-          }  md:static md:flex md:max-h-screen md:flex-row md:items-end md:pt-0`}
+          }  md:static md:flex md:max-h-screen md:flex-row md:items-end md:bg-beige md:pt-0`}
         >
           <ul className="flex flex-col gap-6 md:flex-row">
             {informationPages.map((elm, i) => (
@@ -65,7 +90,7 @@ const Header = () => {
                 <Link
                   href={elm.url}
                   className="nav-link responsive-text block"
-                  onClick={() => setNavBar(false)}
+                  onClick={() => setNavBarVisible(false)}
                 >
                   {elm.title}
                 </Link>
