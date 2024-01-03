@@ -1,14 +1,14 @@
 import { collection, config, fields, singleton } from "@keystatic/core";
 
 export default config({
-  storage: { kind: "local" },
-  // storage: {
-  //   kind: "github",
-  //   repo: {
-  //     owner: "yong1le",
-  //     name: "utscacf-website",
-  //   },
-  // },
+  // storage: { kind: "local" },
+  storage: {
+    kind: "github",
+    repo: {
+      owner: "yong1le",
+      name: "utscacf-website",
+    },
+  },
   ui: {
     brand: { name: "UTSC ACF" },
     navigation: ["vision", "committee", "ministry", "event", "church"],
