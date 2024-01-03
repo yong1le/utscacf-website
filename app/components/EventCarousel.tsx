@@ -16,7 +16,6 @@ const EventCarousel = ({ children }: { children: React.ReactNode }) => {
       partialVisibilityGutter: 30,
     },
   };
-  console.log(children);
   return (
     <Carousel
       responsive={responsive}
