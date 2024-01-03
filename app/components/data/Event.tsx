@@ -7,7 +7,7 @@ const Event = ({ name, image, link, description }: EventType) => {
     <div className="m-3 transition-all hover:scale-105">
       <div className="relative h-[250px] w-full bg-opacity-0 sm:h-[300px] md:h-[400px]">
         <Link href={link} target="_blank">
-          <Img src={image || "/"} alt="event Image" />
+          <Img src={image || "/default.png"} alt="event Image" />
         </Link>
         <div className="absolute bottom-0 w-full bg-black/70 p-5">
           <p className="text-2xl">{name}</p>
