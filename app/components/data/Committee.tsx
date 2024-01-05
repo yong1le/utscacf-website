@@ -10,7 +10,7 @@ const Committee = ({ name, roles, handles, image }: CommitteeType) => {
     <div className="flex flex-col pt-6">
       {/* Image */}
       <div
-        className="relative h-[380px] border md:h-[350px]
+        className="relative h-[380px] md:h-[350px]
         lg:h-[250px] xl:h-[300px] 2xl:h-[380px]"
       >
         <Img src={image || "/default.png"} alt={`image of ${name}`} />
