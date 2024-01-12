@@ -13,7 +13,7 @@ const Committee = ({ name, roles, handles, image }: CommitteeType) => {
         className="relative h-[380px] md:h-[350px]
         lg:h-[250px] xl:h-[300px] 2xl:h-[380px]"
       >
-        <Img src={image || "/default.png"} alt={`image of ${name}`} />
+        <Img src={image || "/committee.svg"} alt={`image of ${name}`} />
       </div>
       {/* Name */}
       <p className="pt-6 text-xl">{name}</p>
