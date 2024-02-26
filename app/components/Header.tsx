@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import Section from "./data/Section";
 
 const Header = () => {
@@ -71,18 +71,18 @@ const Header = () => {
       </div>
 
       <button
-        className="nav-link block self-end pb-1 md:hidden"
+        className="nav-link z-50 block self-end pb-1 md:hidden"
         onClick={toggleNavBar}
       >
-        <FaBars size={40} />
+        {!navBarVisible ? <FaBars size={40} /> : <FaTimes size={40} />}
       </button>
       <div className="relative basis-full md:basis-auto">
         <nav
           className={`${
             navBarVisible
-              ? "absolute right-0 z-50 mt-10 max-h-screen rounded-xl bg-orange-100 px-5 py-2"
-              : "hidden max-h-0"
-          }  md:static md:flex md:max-h-screen md:flex-row md:items-end md:bg-beige md:pt-0`}
+              ? "fixed left-0 top-0 z-40 flex h-screen w-screen flex-col items-center justify-center bg-beige/80 text-2xl backdrop-blur"
+              : "h-0 w-0 opacity-0"
+          }  md:static md:flex md:h-auto md:w-auto md:flex-row md:items-end md:bg-beige md:pt-0`}
         >
           <ul className="flex flex-col gap-6 md:flex-row">
             {informationPages.map((elm, i) => (
