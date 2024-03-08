@@ -82,7 +82,7 @@ const Header = () => {
             navBarVisible
               ? "fixed left-0 top-0 z-40 flex h-screen w-screen flex-col items-center justify-center bg-beige/80 text-2xl backdrop-blur"
               : "h-0 w-0 opacity-0"
-          }  md:static md:flex md:h-auto md:w-auto md:flex-row md:items-end md:bg-beige md:pt-0`}
+          }  md:opacity-100 md:static md:flex md:h-auto md:w-auto md:flex-row md:items-end md:bg-beige md:pt-0`}
         >
           <ul className="flex flex-col gap-6 md:flex-row">
             {informationPages.map((elm, i) => (
