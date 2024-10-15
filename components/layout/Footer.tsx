@@ -1,7 +1,7 @@
 import React from "react";
-import Section from "@/components/data/Section";
+import Section from "@/components/layout/Section";
 import { LuDot } from "react-icons/lu";
-import SocialIcon from "@/components/SocialIcon";
+import SocialIcon from "@/components/shared/buttons/SocialIcon";
 
 const Footer = () => {
   const socials = [

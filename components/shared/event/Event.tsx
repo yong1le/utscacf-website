@@ -1,12 +1,13 @@
 import { EventType } from "@/types";
-import Img from "@/components/Img";
+import Img from "@/components/shared/ui/Img";
 import {
   Card,
   CardContent,
   CardDescription,
   CardTitle,
 } from "@/components/ui/card";
-import Btn from "@/components/Btn";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const Event = ({ name, image, link, description }: EventType) => {
   return (
@@ -17,10 +18,10 @@ const Event = ({ name, image, link, description }: EventType) => {
       <CardContent className="flex flex-col items-start gap-3 pt-6">
         <CardTitle>{name}</CardTitle>
         <CardDescription>{description}</CardDescription>
-        <Btn href={link} variant="default">
-          Learn More
-        </Btn>
       </CardContent>
+      <Button asChild>
+        <Link href={link}>Learn More</Link>
+      </Button>
     </Card>
   );
 };

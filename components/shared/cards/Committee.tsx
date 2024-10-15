@@ -1,7 +1,7 @@
 import React from "react";
-import Img from "@/components/Img";
+import Img from "@/components/shared/ui/Img";
 import { CommitteeType } from "@/types";
-import SocialIcon from "@/components/SocialIcon";
+import SocialIcon from "@/components/shared/buttons/SocialIcon";
 
 const Committee = ({ name, roles, handles, image }: CommitteeType) => {
   return (

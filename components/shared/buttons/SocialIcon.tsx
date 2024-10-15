@@ -36,7 +36,9 @@ const getIcon = (provider: SocialProvidersType) => {
 const SocialIcon = ({ href, provider, ...buttonProps }: PropsType) => {
   return (
     <Button asChild {...buttonProps}>
-      <Link href={href}>{getIcon(provider)}</Link>
+      <Link href={href} target="_blank">
+        {getIcon(provider)}
+      </Link>
     </Button>
   );
 };

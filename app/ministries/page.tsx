@@ -1,6 +1,6 @@
 import React from "react";
-import Ministry from "@/components/data/Ministry";
-import Section from "@/components/data/Section";
+import Ministry from "@/components/shared/cards//Ministry";
+import Section from "@/components/layout/Section";
 
 const MinistriesPage = async () => {
   const ministries = [

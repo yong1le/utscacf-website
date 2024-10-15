@@ -1,5 +1,5 @@
 import React from "react";
-import Img from "@/components/Img";
+import Img from "@/components/shared/ui/Img";
 import { MinistryType } from "@/types";
 
 const Ministry = async ({ name, image, description }: MinistryType) => {

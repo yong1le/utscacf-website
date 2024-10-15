@@ -1,6 +1,6 @@
 import React from "react";
-import Committee from "@/components/data/Committee";
-import Section from "@/components/data/Section";
+import Committee from "@/components/shared/cards/Committee";
+import Section from "@/components/layout/Section";
 import { CommitteeType } from "@/types";
 
 const CommitteePage = async () => {

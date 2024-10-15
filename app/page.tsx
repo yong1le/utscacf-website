@@ -1,5 +1,5 @@
-import Section from "@/components/data/Section";
-import EventCarousel from "@/components/EventCarousel";
+import Section from "@/components/layout/Section";
+import EventCarousel from "@/components/shared/event/EventCarousel";
 
 export default async function Home() {
   const vision = {

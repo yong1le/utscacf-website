@@ -1,5 +1,5 @@
 import React from "react";
-import Section from "@/components/data/Section";
+import Section from "@/components/layout/Section";
 
 // Finding a Local Church
 const Contact = () => {

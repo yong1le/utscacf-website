@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
-import Section from "@/components/data/Section";
+import Section from "@/components/layout/Section";
 
 const Header = () => {
   const [navBarVisible, setNavBarVisible] = useState(false);

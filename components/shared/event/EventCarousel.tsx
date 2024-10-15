@@ -5,7 +5,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Event from "@/components/data/Event";
+import Event from "@/components/shared/event/Event";
 
 const EventCarousel = () => {
   const events = [
