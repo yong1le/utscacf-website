@@ -5,6 +5,7 @@ import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Section from "@/components/layout/Section";
 import Text from "@/components/shared/ui/Text";
+import { Button } from "../ui/button";
 
 const Header = () => {
   const [navBarVisible, setNavBarVisible] = useState(false);
@@ -68,12 +69,13 @@ const Header = () => {
         </Link>
       </div>
 
-      <button
-        className="nav-link z-50 block self-end pb-1 md:hidden"
+      <Button
+        variant="ghost"
+        className="z-50 self-end py-6 hover:bg-orange-200 md:hidden"
         onClick={toggleNavBar}
       >
         {!navBarVisible ? <FaBars size={40} /> : <FaTimes size={40} />}
-      </button>
+      </Button>
       <div className="relative basis-full md:basis-auto">
         <nav
           className={`${
@@ -85,13 +87,13 @@ const Header = () => {
           <ul className="flex flex-col gap-6 md:flex-row">
             {informationPages.map((elm, i) => (
               <li key={i}>
-                <Link
-                  href={elm.url}
-                  className="nav-link block"
-                  onClick={() => setNavBarVisible(false)}
-                >
-                  <Text variant="p">{elm.title}</Text>
-                </Link>
+                <Button asChild variant="ghost" className="hover:bg-orange-200">
+                  <Link href={elm.url} onClick={() => setNavBarVisible(false)}>
+                    <Text variant="p" className="block">
+                      {elm.title}
+                    </Text>
+                  </Link>
+                </Button>
               </li>
             ))}
           </ul>
