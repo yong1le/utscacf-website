@@ -18,10 +18,12 @@ const Event = ({ name, image, link, description }: EventType) => {
       <CardContent className="flex flex-col items-start gap-3 pt-6">
         <CardTitle>{name}</CardTitle>
         <CardDescription>{description}</CardDescription>
+        <Button asChild className="self-end">
+          <Link href={link} target="_blank">
+            Learn More
+          </Link>
+        </Button>
       </CardContent>
-      <Button asChild>
-        <Link href={link}>Learn More</Link>
-      </Button>
     </Card>
   );
 };
