@@ -3,19 +3,11 @@
 @tailwind utilities;
 
 @layer base {
-  .responsive-title {
-    @apply pb-5 text-3xl md:pb-8 md:text-5xl lg:pb-10 lg:text-6xl;
-  }
-
-  .responsive-text {
-    @apply md:text-xl;
-  }
-
   .nav-link {
     @apply rounded-lg p-2 transition-all hover:bg-orange-200;
   }
-  :root {
 
+  :root {
     --radius: 0.5rem
   }
 }

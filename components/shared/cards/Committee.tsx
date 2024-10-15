@@ -1,5 +1,5 @@
 import React from "react";
-import Img from "@/components/shared/ui/Img";
+import Image from "@/components/shared/ui/Image";
 import { CommitteeType } from "@/types";
 import SocialIcon from "@/components/shared/buttons/SocialIcon";
 
@@ -8,7 +8,7 @@ const Committee = ({ name, roles, handles, image }: CommitteeType) => {
     <div className="flex flex-col pt-6">
       {/* Image */}
       <div className="relative h-[380px] md:h-[350px] lg:h-[250px] xl:h-[300px] 2xl:h-[380px]">
-        <Img src={image || "/committee.svg"} alt={`image of ${name}`} />
+        <Image src={image || "/committee.svg"} alt={`image of ${name}`} />
       </div>
       {/* Name */}
       <p className="pt-6 text-xl">{name}</p>

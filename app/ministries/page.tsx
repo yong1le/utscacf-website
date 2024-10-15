@@ -1,6 +1,7 @@
 import React from "react";
 import Ministry from "@/components/shared/cards//Ministry";
 import Section from "@/components/layout/Section";
+import Text from "@/components/shared/ui/Text";
 
 const MinistriesPage = async () => {
   const ministries = [
@@ -26,7 +27,7 @@ const MinistriesPage = async () => {
   return (
     <div>
       <Section className="bg-beige">
-        <h1 className="responsive-title"> Ministries</h1>
+        <Text variant="h1"> Ministries</Text>
         <div className="grid grid-cols-1 gap-16 xl:grid-cols-2 xl:gap-8">
           {ministries &&
             ministries.map((elm, i) => (

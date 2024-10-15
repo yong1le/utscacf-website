@@ -1,9 +1,9 @@
 import React from "react";
-import Image from "next/image";
+import NextImage from "next/image";
 
-const Img = ({ src, alt }: { src: string, alt: string }) => {
+const Image = ({ src, alt }: { src: string; alt: string }) => {
   return (
-    <Image
+    <NextImage
       src={`${src}`}
       alt={alt}
       fill={true}
@@ -12,4 +12,4 @@ const Img = ({ src, alt }: { src: string, alt: string }) => {
   );
 };
 
-export default Img;
+export default Image;

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Section from "@/components/layout/Section";
+import Text from "@/components/shared/ui/Text";
 
 const Header = () => {
   const [navBarVisible, setNavBarVisible] = useState(false);
@@ -86,10 +87,10 @@ const Header = () => {
               <li key={i}>
                 <Link
                   href={elm.url}
-                  className="nav-link responsive-text block"
+                  className="nav-link block"
                   onClick={() => setNavBarVisible(false)}
                 >
-                  {elm.title}
+                  <Text variant="p">{elm.title}</Text>
                 </Link>
               </li>
             ))}
