@@ -4,11 +4,11 @@
   "properties": {
     "roles": {
       "required": true,
-      "description": "",
+      "description": "Chair",
+      "values": [],
       "fieldType": "Tags",
       "dataType": "array",
-      "title": "Roles",
-      "values": []
+      "title": "Roles"
     }
   }
 }
