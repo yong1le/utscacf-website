@@ -1,0 +1,24 @@
+{
+  "commit": "af297cef3807cc50d4e74a525bfd6cc94e5cdd80",
+  "generated": "Tue, 22 Oct 2024 03:55:48 GMT",
+  "metadata": [
+    {
+      "__outstatic": {
+        "commit": "754d89bb80d59790a61c64894731efc343a5cb08",
+        "hash": "493044417",
+        "path": "outstatic/content/ministries/weekly-fellowship-meetings.md"
+      },
+      "author": {
+        "name": "Yong Le He",
+        "picture": "https://avatars.githubusercontent.com/u/76537485?v=4"
+      },
+      "collection": "ministries",
+      "coverImage": "/images/ministry-kzNj.png",
+      "description": "",
+      "publishedAt": "2024-10-22T03:07:33.145Z",
+      "slug": "weekly-fellowship-meetings",
+      "status": "published",
+      "title": "Weekly Fellowship Meetings"
+    }
+  ]
+}
