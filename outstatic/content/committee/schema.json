@@ -1,0 +1,14 @@
+{
+  "title": "committee",
+  "type": "object",
+  "properties": {
+    "roles": {
+      "required": true,
+      "description": "",
+      "fieldType": "Tags",
+      "dataType": "array",
+      "title": "Roles",
+      "values": []
+    }
+  }
+}
