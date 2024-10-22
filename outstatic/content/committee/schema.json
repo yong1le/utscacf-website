@@ -4,7 +4,7 @@
   "properties": {
     "roles": {
       "required": true,
-      "description": "Chair",
+      "description": "",
       "values": [],
       "fieldType": "Tags",
       "dataType": "array",
