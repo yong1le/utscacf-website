@@ -1,7 +1,6 @@
 import { collection, config, fields, singleton } from "@keystatic/core";
 
 export default config({
-  // storage: { kind: "local" },
   storage: {
     kind: "github",
     repo: {
@@ -11,7 +10,7 @@ export default config({
   },
   ui: {
     brand: { name: "UTSC ACF" },
-    navigation: ["vision", "committee", "ministry", "event", "church"],
+    navigation: ["vision", "committee", "ministry", "church"],
   },
   collections: {
     // @see CommitteeType
@@ -32,20 +31,28 @@ export default config({
           itemLabel: (props) => props.value,
           validation: { length: { min: 1 } },
         }),
-        handles: fields.object({
-          facebook: fields.url({
-            label: "Facebook (optional)",
-            description: "Link to facebook account",
+        handles: fields.array(
+          fields.object({
+            provider: fields.select({
+              label: "Provider",
+              description: "Social media provider or email",
+              options: [
+                { label: "Facebook", value: "facebook" },
+                { label: "Instagram", value: "instagram" },
+                { label: "Discord", value: "discord" },
+                { label: "Email", value: "email" },
+              ],
+              defaultValue: "email",
+            }),
+            href: fields.url({
+              label: "Link",
+              description: "Link to the account",
+              validation: {
+                isRequired: true,
+              },
+            }),
           }),
-          instagram: fields.url({
-            label: "Instagram (optional)",
-            description: "Link to instagram account",
-          }),
-          email: fields.url({
-            label: "Email (optional)",
-            description: "Email address",
-          }),
-        }),
+        ),
       },
     }),
 
@@ -61,37 +68,10 @@ export default config({
           directory: "public/images/ministry",
           publicPath: "/images/ministry",
         }),
-        description: fields.document({
+        description: fields.mdx({
           label: "Description",
           description:
             "Detailed description of the ministry (Who, What, Where, When, How, etc...)",
-          formatting: true,
-        }),
-      },
-    }),
-
-    // @see EventType
-    event: collection({
-      path: "content/event/*",
-      label: "Events",
-      slugField: "name",
-      schema: {
-        name: fields.slug({ name: { label: "Name" } }),
-        image: fields.image({
-          label: "Image (optional)",
-          directory: "public/images/event",
-          publicPath: "/images/event",
-        }),
-        link: fields.url({
-          label: "Link",
-          description:
-            "Relevant link regarding the event (Information, RBSP, etc...)",
-          validation: { isRequired: true },
-        }),
-        description: fields.text({
-          label: "Description (optional)",
-          description:
-            "Description of the event (Who, What, Where, When, etc...)",
         }),
       },
     }),
@@ -108,10 +88,9 @@ export default config({
           directory: "public/images/church",
           publicPath: "/images/church",
         }),
-        description: fields.document({
+        description: fields.mdx({
           label: "Description",
           description: "Description of the Church (Address, Time, etc...)",
-          formatting: true,
         }),
       },
     }),
@@ -127,10 +106,9 @@ export default config({
         contentField: "vision",
       },
       schema: {
-        vision: fields.document({
+        vision: fields.mdx({
           label: "Vision",
           description: "Vision of the Year",
-          formatting: true,
         }),
         year: fields.text({
           label: "Year",

@@ -7,8 +7,14 @@ type CommitteeType = Entry<
 
 type MinistryType = Entry<(typeof keystaticConfig)["collections"]["ministry"]>;
 
-type EventType = Entry<(typeof keystaticConfig)["collections"]["event"]>;
-
 type ChurchType = Entry<(typeof keystaticConfig)["collections"]["church"]>;
 
 type VisionType = Entry<(typeof keystaticConfig)["singletons"]["vision"]>;
+
+type SocialProvidersType =
+  | "discord"
+  | "instagram"
+  | "facebook"
+  | "email"
+  | "linktree"
+  | string;
