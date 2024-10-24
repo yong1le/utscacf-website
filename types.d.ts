@@ -1,29 +1,15 @@
-export type CommitteeType = {
-  name: string;
-  roles: string[];
-  handles: {
-    provider: SocialProvidersType;
-    href: string;
-  }[];
-  image: string?;
-};
+import { Entry } from "@keystatic/core/reader";
+import keystaticConfig from "./keystatic.config";
 
-export type MinistryType = {
-  name: string;
-  description: string;
-  image: string?;
-};
+type CommitteeType = Entry<
+  (typeof keystaticConfig)["collections"]["committee"]
+>;
 
-export type EventType = {
-  name: string;
-  description: string;
-  link: string;
-  image: string?;
-};
+type MinistryType = Entry<(typeof keystaticConfig)["collections"]["ministry"]>;
 
-type ChurchType = {};
+type ChurchType = Entry<(typeof keystaticConfig)["collections"]["church"]>;
 
-type VisionType = {};
+type VisionType = Entry<(typeof keystaticConfig)["singletons"]["vision"]>;
 
 type SocialProvidersType =
   | "discord"

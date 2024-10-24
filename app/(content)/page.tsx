@@ -1,22 +1,19 @@
 import Section from "@/components/layout/Section";
 import EventCarousel from "@/components/shared/event/EventCarousel";
 import Text from "@/components/shared/ui/Text";
+import { reader } from "@/app/_lib/reader";
+
+import { MDXRemote } from "next-mdx-remote/rsc";
 
 export default async function Home() {
-  const vision = {
-    vision: `
-        We see Jesus inviting us to flourish in community, loving our neighbours with every
-        opportunity.
-    `,
-    year: "2024-2025",
-  };
+  const vision = await reader().singletons.vision.read();
 
   return (
     // Vision Statement
     <div>
       <Section>
         <Text variant="h1" className="bg-beige leading-tight">
-          {vision && vision.vision}
+          {vision && <MDXRemote source={await vision.vision()} />}
         </Text>
         <Text variant="p" className="self-end italic">
           - ACF Vision {vision && vision.year}
@@ -32,7 +29,7 @@ export default async function Home() {
           relationships and grow in faith with a desire to serve.
         </Text>
 
-        <h1 className="pb-4 text-xl">View our upcoming events</h1>
+        <h1 className="pb-8 text-xl">View our upcoming events</h1>
         <EventCarousel />
       </Section>
     </div>

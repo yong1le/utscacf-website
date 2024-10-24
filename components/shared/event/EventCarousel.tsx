@@ -7,21 +7,8 @@ import {
 } from "@/components/ui/carousel";
 import Event from "@/components/shared/event/Event";
 
-const EventCarousel = () => {
-  const events = [
-    {
-      name: "Kickoff Program!",
-      image: "/ministry.png",
-      link: "https://google.com",
-      description: "First official fall program",
-    },
-    {
-      name: "Prayer Walk",
-      image: "/committee.svg",
-      link: "https://google.com",
-      description: "First official fall program",
-    },
-  ];
+const EventCarousel = async () => {
+  const events = [];
 
   return (
     <Carousel>
@@ -30,10 +17,10 @@ const EventCarousel = () => {
           <CarouselItem key={i} className="md:basis-1/2 xl:basis-1/3">
             <Event
               key={i}
-              name={e.name}
-              image={e.image}
-              link={e.link}
-              description={e.description}
+              name={e.entry.name}
+              image={e.entry.image}
+              link={e.entry.link}
+              description={e.entry.description}
             />
           </CarouselItem>
         ))}

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const font = Poppins({
   subsets: ["latin"],
   display: "swap",
-  weight: ["200", "900"],
+  weight: ["300", "800"],
 });
 
 export default function RootLayout({

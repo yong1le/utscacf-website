@@ -2,27 +2,10 @@ import React from "react";
 import Ministry from "@/components/shared/cards//Ministry";
 import Section from "@/components/layout/Section";
 import Text from "@/components/shared/ui/Text";
+import { reader } from "@/app/_lib/reader";
 
 const MinistriesPage = async () => {
-  const ministries = [
-    {
-      name: "Weekly Fellowship Meetings",
-      image: null,
-      description:
-        "The main fellowship meeting for ACF. We meet every Wednesday from 5:00pm-7:00pm. Rooms TBA.",
-    },
-    {
-      name: "Small Groups",
-      image: null,
-      description:
-        "Smaller groups of 4-6 people that meet weekly outside of normal fellowship times.",
-    },
-    {
-      name: "JAW Week",
-      image: null,
-      description: "TBD",
-    },
-  ];
+  const ministries = await reader().collections.ministry.all();
 
   return (
     <div>
@@ -33,9 +16,9 @@ const MinistriesPage = async () => {
             ministries.map((elm, i) => (
               <Ministry
                 key={i}
-                name={elm.name}
-                image={elm.image}
-                description={elm.description}
+                name={elm.entry.name}
+                image={elm.entry.image}
+                description={elm.entry.description}
               />
             ))}
         </div>
