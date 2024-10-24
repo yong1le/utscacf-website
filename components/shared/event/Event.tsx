@@ -1,4 +1,3 @@
-import { EventType } from "@/types";
 import Image from "@/components/shared/ui/Image";
 import {
   Card,
@@ -9,7 +8,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-const Event = ({ name, image, link, description }: EventType) => {
+const Event = ({ name, image, link, description }) => {
   return (
     <Card className="w-full overflow-hidden">
       <div className="relative h-[200px] w-[100%]">
