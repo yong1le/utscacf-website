@@ -10,6 +10,7 @@ import {
   FaLink,
 } from "react-icons/fa";
 import { SiLinktree } from "react-icons/si";
+import Text from "@/components/shared/ui/Text";
 
 type PropsType = {
   href: string;
@@ -36,9 +37,11 @@ const getIcon = (provider: SocialProvidersType) => {
 const SocialIcon = ({ href, provider, ...buttonProps }: PropsType) => {
   return (
     <Button asChild {...buttonProps}>
-      <Link href={href} target="_blank">
-        {getIcon(provider)}
-      </Link>
+      <Text variant="p">
+        <Link href={href} target="_blank">
+          {getIcon(provider)}
+        </Link>
+      </Text>
     </Button>
   );
 };

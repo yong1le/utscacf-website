@@ -7,7 +7,9 @@ const Contact = () => {
   return (
     <div>
       <Section className="bg-beige">
-        <Text variant="h1">Join Us!</Text>
+        <Text variant="h1" className="font-bold">
+          Join Us!
+        </Text>
       </Section>
     </div>
   );

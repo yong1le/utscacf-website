@@ -3,6 +3,8 @@ import Section from "@/components/layout/Section";
 import { LuDot } from "react-icons/lu";
 import SocialIcon from "@/components/shared/buttons/SocialIcon";
 
+import Text from "@/components/shared/ui/Text";
+
 const Footer = () => {
   const socials = [
     {
@@ -36,7 +38,6 @@ const Footer = () => {
         <LuDot className="hidden sm:block" />
         <p>Transformation</p>
       </div>
-      <h3 className="text-2xl">Contact Us</h3>
       <nav className="mb-10 mt-2 flex gap-4">
         {socials.map((social, index) => (
           <SocialIcon

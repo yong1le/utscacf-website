@@ -9,7 +9,7 @@ const Ministry = async ({ name, image, description }: MinistryType) => {
       <div className="relative h-[300px] w-[100%] md:h-[400px] xl:h-[300px]">
         <Image src={image || "/default.png"} alt={`Image of ${name}`} />
       </div>
-      <p className="pt-6 text-2xl">{name}</p>
+      <p className="pt-6 text-2xl font-bold">{name}</p>
       <MDXRemote source={await description()} />
     </div>
   );

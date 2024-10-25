@@ -10,7 +10,9 @@ const MinistriesPage = async () => {
   return (
     <div>
       <Section className="bg-beige">
-        <Text variant="h1"> Ministries</Text>
+        <Text variant="h1" className="font-bold">
+          Ministries
+        </Text>
         <div className="grid grid-cols-1 gap-16 xl:grid-cols-2 xl:gap-8">
           {ministries &&
             ministries.map((elm, i) => (
