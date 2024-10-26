@@ -36,7 +36,7 @@ const getIcon = (provider: SocialProvidersType) => {
 
 const SocialIcon = ({ href, provider, ...buttonProps }: PropsType) => {
   return (
-    <Button asChild {...buttonProps}>
+    <Button asChild {...buttonProps} className="cursor-pointer">
       <Text variant="p">
         <Link href={href} target="_blank">
           {getIcon(provider)}

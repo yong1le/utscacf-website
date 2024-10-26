@@ -9,6 +9,8 @@ type MinistryType = Entry<(typeof keystaticConfig)["collections"]["ministry"]>;
 
 type ChurchType = Entry<(typeof keystaticConfig)["collections"]["church"]>;
 
+type ContentType = Entry<(typeof keystaticConfig)["collections"]["content"]>;
+
 type VisionType = Entry<(typeof keystaticConfig)["singletons"]["vision"]>;
 
 type SocialProvidersType =

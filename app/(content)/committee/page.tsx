@@ -3,6 +3,7 @@ import Committee from "@/components/shared/cards/Committee";
 import Section from "@/components/layout/Section";
 import Text from "@/components/shared/ui/Text";
 import { reader } from "@/app/_lib/reader";
+import Content from "@/components/shared/ui/Content";
 
 const CommitteePage = async () => {
   const committees = await reader().collections.committee.all();
@@ -10,9 +11,7 @@ const CommitteePage = async () => {
   return (
     <div>
       <Section className="bg-beige">
-        <Text variant="h1" className="font-bold">
-          Committee Team
-        </Text>
+        <Content slug="committee" />
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {committees &&
             committees.map((elm, i) => (

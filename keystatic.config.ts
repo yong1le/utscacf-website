@@ -10,7 +10,7 @@ export default config({
   },
   ui: {
     brand: { name: "UTSC ACF" },
-    navigation: ["vision", "committee", "ministry", "church"],
+    navigation: ["vision", "committee", "ministry", "church", "content"],
   },
   collections: {
     // @see CommitteeType
@@ -91,6 +91,20 @@ export default config({
         description: fields.mdx({
           label: "Description",
           description: "Description of the Church (Address, Time, etc...)",
+        }),
+      },
+    }),
+
+    content: collection({
+      path: "content/content/*",
+      label: "Content",
+      slugField: "name",
+      schema: {
+        name: fields.slug({ name: { label: "Name" } }),
+        title: fields.text({ label: "Title" }),
+        content: fields.mdx({
+          label: "Content",
+          description: "Content of the page",
         }),
       },
     }),

@@ -3,6 +3,7 @@ import Text from "@/components/shared/ui/Text";
 import { reader } from "@/app/_lib/reader";
 
 import { MDXRemote } from "next-mdx-remote/rsc";
+import Content from "@/components/shared/ui/Content";
 
 export default async function Home() {
   const vision = await reader().singletons.vision.read();
@@ -19,16 +20,8 @@ export default async function Home() {
         </Text>
       </Section>
 
-      {/* Some more information */}
       <Section className="bg-black text-white">
-        <Text variant="h1" className="font-bold">
-          UTSC Asian Christian Fellowship
-        </Text>
-        <Text variant="p" className="mb-16">
-          We are a student-led Christian campus fellowship at the University of
-          Toronto Scarborough. We aim to build fruitful, Christ-centred
-          relationships and grow in faith with a desire to serve.
-        </Text>
+        <Content slug="about" />
       </Section>
     </div>
   );
