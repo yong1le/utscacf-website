@@ -11,7 +11,7 @@ const MinistriesPage = async () => {
   return (
     <Section className="bg-beige">
       <Content slug="ministry" />
-      <div className="grid grid-cols-1 gap-16 xl:grid-cols-2 xl:gap-8">
+      <div className="grid grid-cols-1 gap-16 xl:gap-28">
         {ministries &&
           ministries.map((elm, i) => (
             <Ministry

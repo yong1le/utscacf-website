@@ -2,7 +2,7 @@ import { collection, config, fields, singleton } from "@keystatic/core";
 
 export default config({
   storage: {
-    kind: "github",
+    kind: "local",
     repo: {
       owner: "yong1le",
       name: "utscacf-website",
