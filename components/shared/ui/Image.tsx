@@ -1,14 +1,24 @@
 import React from "react";
 import NextImage from "next/image";
 
-const Image = ({ src, alt }: { src: string; alt: string }) => {
+const Image = ({
+  src,
+  alt,
+  className,
+}: {
+  src: string;
+  alt: string;
+  className: string;
+}) => {
   return (
-    <NextImage
-      src={`${src}`}
-      alt={alt}
-      fill={true}
-      className="rounded-2xl object-cover"
-    />
+    <div className={`relative ${className}`}>
+      <NextImage
+        src={`${src}`}
+        alt={alt}
+        fill={true}
+        className="rounded-2xl object-cover"
+      />
+    </div>
   );
 };
 

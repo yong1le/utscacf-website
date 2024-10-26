@@ -7,9 +7,11 @@ const Committee = ({ name, roles, handles, image }: CommitteeType) => {
   return (
     <div className="flex flex-col pt-6">
       {/* Image */}
-      <div className="relative h-[380px] md:h-[350px] lg:h-[250px] xl:h-[300px] 2xl:h-[380px]">
-        <Image src={image || "/committee.jpg"} alt={`image of ${name}`} />
-      </div>
+      <Image
+        src={image || "/committee.jpg"}
+        alt={`image of ${name}`}
+        className="h-[380px] md:h-[350px] lg:h-[250px] xl:h-[300px] 2xl:h-[380px]"
+      />
       {/* Name */}
       <p className="pt-6 text-xl">{name}</p>
       {/* Roles */}
