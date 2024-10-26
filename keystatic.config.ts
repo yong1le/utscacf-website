@@ -1,6 +1,6 @@
 import { collection, config, fields, singleton } from "@keystatic/core";
 
-import { block, repeating, wrapper } from "@keystatic/core/content-components";
+import { block, repeating } from "@keystatic/core/content-components";
 
 export const committeeSchema = block({
   label: "Committee",
@@ -103,7 +103,6 @@ export default config({
     brand: { name: "UTSC ACF" },
     navigation: ["vision", "committee", "ministry", "content"],
   },
-  test: {},
 
   singletons: {
     // @see VisionType
