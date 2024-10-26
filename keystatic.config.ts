@@ -174,15 +174,6 @@ export default config({
         content: fields.mdx({
           label: "Content",
           description: "Content of the page",
-          components: {
-            Testimonial: wrapper({
-              label: "Testimonial",
-              schema: {
-                author: fields.text({ label: "Author" }),
-                role: fields.text({ label: "Role" }),
-              },
-            }),
-          },
         }),
       },
     }),

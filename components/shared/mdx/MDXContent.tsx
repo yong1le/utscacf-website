@@ -7,14 +7,12 @@ const MDXContent = async ({
   components,
 }: {
   source: string;
-  components: any;
+  components?: any;
 }) => {
   const { default: Component } = await evaluate(source, runtime);
 
   return (
-    <>
-      <Component components={components} />
-    </>
+    <>{components ? <Component components={components} /> : <Component />}</>
   );
 };
 

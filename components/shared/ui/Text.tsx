@@ -24,7 +24,7 @@ const H1 = ({ className, children }: SubTextProps) => {
 };
 
 const P = ({ className, children }: SubTextProps) => {
-  return <p className={`md:text-xl ${className}`}>{children}</p>;
+  return <div className={`md:text-xl ${className}`}>{children}</div>;
 };
 
 const Text = ({ variant, className, children }: TextProps) => {
