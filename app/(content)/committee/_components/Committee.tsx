@@ -13,9 +13,9 @@ const Committee = ({ name, roles, handles, image }: CommitteeType) => {
       {/* Name */}
       <p className="pt-6 text-xl">{name}</p>
       {/* Roles */}
-      <div className="flex flex-row gap-4">
+      <div className="flex flex-row gap-2">
         {roles.map((elm, i) => (
-          <p key={i} className="text-slate-600">
+          <p key={i} className="text-sm text-slate-600">
             {elm}
           </p>
         ))}

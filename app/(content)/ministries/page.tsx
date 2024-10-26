@@ -1,27 +1,26 @@
 import React from "react";
-import Ministry from "@/components/shared/cards//Ministry";
+import Ministry from "./_components/Ministry";
 import Section from "@/components/layout/Section";
-import Text from "@/components/shared/ui/Text";
 import { reader } from "@/app/_lib/reader";
-import Content from "@/components/shared/ui/Content";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import MinistryGrid from "./_components/MinistryGrid";
+import { text } from "@/app/_lib/textComponents";
 
 const MinistriesPage = async () => {
-  const ministries = await reader().collections.ministry.all();
+  const ministryPage = await reader().singletons.ministry.read();
 
   return (
-    <Section className="bg-beige">
-      <Content slug="ministry" />
-      <div className="grid grid-cols-1 gap-16 xl:gap-28">
-        {ministries &&
-          ministries.map((elm, i) => (
-            <Ministry
-              key={i}
-              name={elm.entry.name}
-              image={elm.entry.image}
-              description={elm.entry.description}
-            />
-          ))}
-      </div>
+    <Section>
+      {ministryPage && (
+        <MDXRemote
+          source={await ministryPage.content()}
+          components={{
+            Ministry: Ministry,
+            MinistryGrid: MinistryGrid,
+            ...text,
+          }}
+        />
+      )}
     </Section>
   );
 };

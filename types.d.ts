@@ -1,13 +1,12 @@
 import { Entry } from "@keystatic/core/reader";
-import keystaticConfig from "./keystatic.config";
+import keystaticConfig, {
+  ministrySchema,
+  committeeSchema,
+} from "./keystatic.config";
 
-type CommitteeType = Entry<
-  (typeof keystaticConfig)["collections"]["committee"]
->;
+type CommitteeType = Entry<typeof committeeSchema>;
 
-type MinistryType = Entry<(typeof keystaticConfig)["collections"]["ministry"]>;
-
-type ChurchType = Entry<(typeof keystaticConfig)["collections"]["church"]>;
+type MinistryType = Entry<typeof ministrySchema>;
 
 type ContentType = Entry<(typeof keystaticConfig)["collections"]["content"]>;
 

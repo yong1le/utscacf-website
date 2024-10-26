@@ -11,7 +11,7 @@ const Ministry = async ({ name, image, description }: MinistryType) => {
       </div>
       <div>
         <p className="text-2xl font-bold">{name}</p>
-        <MDXRemote source={await description()} />
+        {description}
       </div>
     </div>
   );
